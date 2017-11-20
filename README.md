@@ -78,12 +78,9 @@ You can try exporting the feature and installing it with the *"Install New Softw
 - On the *Overview tab*, on the left side under the *Exporting* category click *Export Wizard"*.
 - Press the *Directory* button and browse/create a folder that will work as a .p2 repository for the feature.
 - Press *Finish* button.
-Finally install the feature through the *"Install New Software..."* menu.
+Finally install the feature through the *"Install New Software..."* menu. 
 
-
-### Install  
-
-### How to Install New Software
+## How to Install New Software
 
 You can find the *"Install New Software..."* option in the *Help* context menu.
 
