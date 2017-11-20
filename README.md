@@ -1,5 +1,6 @@
 # ProtoGen
 Eclipse IDE plugin to autocompile Google's Protocol Buffer files (.proto).
+Once you have installed it, every time you save a .proto file it will generate the corresponding Java class under the *src-gen* directory. You may need to refresh the project after it. 
 
 ## Requirements
 
@@ -39,6 +40,30 @@ One way to do this is creating a soft link to the directory where you extracted 
 To make this work for the current session run:
 
     source ~/.profile
+
+#### Adding the src-gen as a Source Folder
+
+One way to do this is converting the project to a *Maven Project* and adding the following plugin to the *pom.xml*:
+
+    <plugin>
+		<groupId>org.codehaus.mojo</groupId>
+		<artifactId>build-helper-maven-plugin</artifactId>
+		<version>1.1</version>
+		<executions>
+			<execution>
+				<id>add-source</id>
+				<phase>generate-sources</phase>
+				<goals>
+					<goal>add-source</goal>
+				</goals>
+				<configuration>
+					<sources>
+						<source>src-gen</source>
+					</sources>
+				</configuration>
+			</execution>
+		</executions>
+	</plugin>
 
 ## How to Contribute
 
